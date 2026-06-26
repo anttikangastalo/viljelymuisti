@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>  
-  <meta charset="YTF-8">
-  <title>viljelymuisti</title>
+  <meta charset="UTF-8">
+  <title>Viljelymuisti</title>
 </head>
 <body>
   <h1>viljelymuisti</h1>
   <p>Ensimmäinen oma viljelyohjelma toimii.</p>
 
-  <button>Lataa Vipu GeoJSON</button>
+  <input type="file" id="tiedosto" accept=".geojson,.json">
+  <h2>Lohkot</h2>
+  <u1 id="lohkolista"></u1>
+
+  <script>
+    const tiedosto = document.getElementById("tiedosto");
+    const lohkolista = document.getElementById("lohkolista");
+
+    tiedosto.addEventListener("change", function () {
+      const file = tiedosto.files[0];
+      const reader = new filereader();
+
+      reader.onload = function () {
+        const geojson = JSON.parse(reader.result);
+        lohkolista.innerHTML = "";
+
+        geojson.features.forEach(function (lohko) {
+          const nimi =
+            lohko.properties.Nimi ||
+            lohko.properties.nimi ||
+            lohko.properties.name ||
+            "nimetön lohko";
+
+          const rivi = document.createElement("li");
+          rivi.textContent = nimi;
+          lohkolista.appendChild(rivi);
+        });
+      };
+
+      reader.readAsText(file);
+    });
+    
+  </script>
 </body>
 </html>
