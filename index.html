@@ -18,7 +18,7 @@
 
     tiedosto.addEventListener("change", function () {
       const file = tiedosto.files[0];
-      const reader = new filereader();
+      const reader = new FileReader();
 
       reader.onload = function () {
         const geojson = JSON.parse(reader.result);
@@ -40,6 +40,7 @@
       reader.readAsText(file);
     });
     
+  
   </script>
 </body>
 </html>
