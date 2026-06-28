@@ -32,7 +32,11 @@
             "nimetön lohko";
 
           const rivi = document.createElement("li");
-          rivi.textContent = nimi + " _ " + lohko.properties.ala + " ha";
+          rivi.innerHTML = `
+<strong>${nimi}</strong><br>
+Pinta-ala: ${lohko.properties.ala} ha<br>
+Tunnus: ${lohko.properties.pltunnus}
+`;
 
 rivi.onclick = function () {
 alert(JSON.stringify(lohko.properties, null, 2));
