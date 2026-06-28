@@ -55,7 +55,24 @@ const lohkoTiedot = document.getElementById("lohkoTiedot");
 lohkoTiedot.innerHTML = `
 <div style="border:2px solid green; padding:15px; margin:15px 0; border-radius:10px;">
 <h2>${nimi}</h2>
-<p>Tähän tulee myöhemmin muistiinpanot.</p>
+<p><b>Päivämäärä</b</p>
+<input type="date">
+
+<p><b>Toimenpide</b></p>
+<select>
+  <option>Istutus</option>
+  <option>Multaus</option>
+  <option>Rikkaruiskutus</option>
+  <option>Tautiruiskutus</option>
+  <option>Kastelu</option>
+  <option>Nosto</option>
+</select>
+<p><b>Muistiinpano</b></p>
+<textarea rows="4" cols="40"></textarea>
+
+<br><br>
+
+<button>Tallenna</button>
 </div>
 `;
 }
