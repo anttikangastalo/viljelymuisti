@@ -33,7 +33,12 @@
 
           const rivi = document.createElement("li");
           rivi.textContent = nimi;
-          lohkolista.appendChild(rivi);
+
+rivi.onclick = function () {
+alert(JSON.stringify(lohko.properties, null, 2));
+};
+
+lohkolista.appendChild(rivi);
         });
       };
 
