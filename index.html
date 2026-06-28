@@ -5,7 +5,7 @@
   <title>Viljelymuisti</title>
 </head>
 <body>
-  <h1>viljelymuisti</h1>
+  <h1>Viljelymuisti</h1>
   <p>Ensimmäinen oma viljelyohjelma toimii.</p>
 
   <input type="file" id="tiedosto" accept=".geojson,.json">
@@ -75,7 +75,9 @@ lohkoTiedot.innerHTML = `
 <button>Tallenna</button>
 </div>
 `;
-}
+  lohkoTiedot.scrollIntoView({
+    behavior: "smooth"
+});
 
   </script>
 </body>
