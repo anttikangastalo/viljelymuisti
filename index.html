@@ -49,13 +49,13 @@ lohkolista.appendChild(rivi);
       reader.readAsText(file);
     });
     
-  function avaaLohko(nimi) {
-    const lohkoTiedot = document.getElementById("lohkoTiedot);
+function avaaLohko(nimi) {
+const lohkoTiedot = document.getElementById("lohkoTiedot");
 
-  lohkoTiedot.innerHTML = `
-  <div style="border:2px solid green; padding:15px; margin:15px 0; border-radius:10px;">
-      <h2>🌾 ${nimi}</h2>
-      <p>Tähän tulee myöhemmin muistiinpanot.</p>
+lohkoTiedot.innerHTML = `
+<div style="border:2px solid green; padding:15px; margin:15px 0; border-radius:10px;">
+<h2>${nimi}</h2>
+<p>Tähän tulee myöhemmin muistiinpanot.</p>
 </div>
 `;
 }
