@@ -32,10 +32,13 @@
             "nimetön lohko";
 
           const rivi = document.createElement("li");
-          rivi.innerHTML = `
-<strong>${nimi}</strong><br>
-Pinta-ala: ${lohko.properties.ala} ha<br>
-Tunnus: ${lohko.properties.pltunnus}
+         rivi.innerHTML = `
+<div style="border:1px solid #ccc; padding:10px; margin:10px 0; border-radius:8px;">
+<h3>${nimi}</h3>
+<p><b>Pinta-ala:</b> ${lohko.properties.ala} ha</p>
+<p><b>Tunnus:</b> ${lohko.properties.pltunnus}</p>
+<button>Muistiinpanot</button>
+</div>
 `;
 
 rivi.onclick = function () {
