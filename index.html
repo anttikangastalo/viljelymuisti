@@ -38,7 +38,7 @@
 <h3>${nimi}</h3>
 <p><b>Pinta-ala:</b> ${lohko.properties.ala} ha</p>
 <p><b>Tunnus:</b> ${lohko.properties.pltunnus}</p>
-<button onclick="avaaLohko('${nimi}')">Muistiinpanot</button>
+<button onclick="avaaLohko('${JSON.stringify(nimi)})'>Muistiinpanot</button>
 </div>
 `;
 
